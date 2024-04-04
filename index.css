@@ -1,0 +1,299 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Public Sans", sans-serif;
+}
+:root{
+    --linewidth : 0px;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px 0;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+.hamburger{
+    margin-right: 25px;
+    visibility: hidden;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    
+}
+nav ul li:hover{
+    --linewidth : 100%;
+}
+nav ul li{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.underline{
+    width: var(--linewidth);
+    height: 3px;
+    background-color: hsl(136, 65%, 51%);
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+nav ul a{
+    text-decoration: none;
+    color:gray;
+}
+
+.request button{
+    background-color: hsl(136, 65%, 51%);
+    padding: 13px 29px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+.request button:hover{
+    background-color: hsl(192, 70%, 51%);
+}
+.container{
+    position: absolute;
+    
+}
+.left{
+
+    width: 600px;
+    margin: 80px;
+}
+.digibanking{
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.digicontent{
+    color: grey;
+}
+.right{
+    background-image: url('images/bg-intro-desktop.svg');
+    background-position: right;
+    background-size:16cm;
+    background-repeat: no-repeat;
+}
+.right img{
+    width: 550px;
+}
+
+.digibanking-heading{
+    font-weight: 300;
+    font-size: 50px;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bgimage{
+    height: 800px;
+    position: absolute;
+}
+
+.cards{
+    margin: 50px 80px;
+    display : flex ;
+    gap: 23px;
+}
+.whybank > h1{
+    font-weight: 500;
+    margin: 50px 80px;
+}
+.subtitle{
+    color: grey;
+    margin: 40px 80px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.card p{
+    width: 300px;
+    color: grey;
+}
+.latest{
+    padding: 80px;
+    padding-right: 0;
+    background-color: hsl(0, 0%, 99%)
+}
+.latest > h1{
+    margin: 30px 0;
+    font-weight: 500;
+}
+.latcards{
+    display: flex;
+    gap: 54px;
+}
+.latcards p{
+
+    display: flex;
+    
+}
+.latcard img{
+    height: 167px;
+    margin-bottom: 17px;
+    
+}
+.byname{
+    font-size: small;
+    color: grey;
+}
+.latcard{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    border-radius: 8px;
+    width: 250px;
+    padding-bottom: 15px;
+}
+.whybank{
+    background-color: hsl(0, 0%, 98%);
+    padding: 10px 0;
+}
+
+.footer{
+    width: 95.1%;
+    display: flex;
+    justify-content: space-around;
+    background-color: hsl(233, 26%, 24%);
+    padding: 40px;
+}
+.footright span{
+    color: grey;
+    
+}
+.footright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.icons{
+    display: flex;
+    gap: 13px;
+    cursor: pointer;
+}
+.icon img:hover{
+    fill: #0000FF;
+}
+.logo{
+    filter: invert();
+}
+.lists{
+    display: flex;
+    gap: 64px;
+}
+.list ul li{
+    margin: 10px 0;
+    color: white;
+    list-style: none;
+    cursor: pointer;
+}
+.list ul li:hover{
+    color: hsl(192, 70%, 51%);;
+}
+.footleft{
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}   
+.content{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.content h4{
+    font-weight: 500; 
+    cursor: pointer;
+}
+.content h4:hover{
+    color:hsl(192, 70%, 51%); 
+
+}
+.content p{
+    color: grey;
+}
+
+@media only screen and (max-width: 375px){
+    nav ul{
+        visibility: hidden;
+    }
+    #firstrequest{
+        visibility: hidden;
+    }
+    .hamburger{
+        visibility: visible;
+    }
+    
+    .first{
+        flex-direction: column-reverse;
+        
+        align-items: center;
+        background-position: bottom;
+    }
+    .digibanking{
+        gap: 43px;
+    }
+    .digibanking-heading{
+        font-size: 58px;
+    }
+    .digicontent{
+        font-size: 26px;
+    }
+    .digirequest{
+        display: flex;
+        justify-content: center;
+    }
+    .cards{
+        align-items: center;
+        flex-direction: column;
+        gap: 45px;
+    }
+    .card{
+        align-items: center;
+    }
+    .whybank h1{
+        text-align: center;
+    }
+    .subtitle p{
+        text-align: center;
+    }
+    .latcards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .latcard{
+        padding-bottom: 20px;
+    }
+    .latest h1{
+        text-align: center;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .footleft{
+        gap: 19px;
+    }
+    .lists{
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+}
